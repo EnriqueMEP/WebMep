@@ -1,54 +1,56 @@
-// 🎯 Design Tokens de MEP Projects
-// Sincronizado automáticamente desde Figma
-// Última actualización: ${new Date().toISOString()}
+// 🎯 MEP Design System
+// Extraído automáticamente del Design System de Figma
+// Generado: 2025-09-02T11:46:38.198Z
 
-export { mepColors } from './colors.js';
-export { mepSpacing } from './spacing.js';
-
-// Función para aplicar tokens dinámicamente
-export const applyMEPTokens = (tokens = {}) => {
-  console.log('🎨 Aplicando tokens MEP:', tokens);
-  
-  // Aquí se aplicarían los tokens a CSS custom properties
-  if (typeof document !== 'undefined') {
-    const root = document.documentElement;
-    
-    // Aplicar colores
-    if (tokens.colors) {
-      Object.entries(tokens.colors).forEach(([key, value]) => {
-        root.style.setProperty(`--mep-color-${key}`, value);
-      });
-    }
-    
-    // Aplicar espaciado
-    if (tokens.spacing) {
-      Object.entries(tokens.spacing).forEach(([key, value]) => {
-        root.style.setProperty(`--mep-spacing-${key}`, value);
-      });
-    }
-    
-    console.log('✅ Tokens MEP aplicados al DOM');
-  }
-};
-
-// Función para obtener tokens desde el servidor
-export const fetchTokensFromServer = async () => {
-  try {
-    const response = await fetch('http://localhost:3001/api/tokens');
-    const data = await response.json();
-    
-    // Aplicar tokens al DOM
-    applyMEPTokens(data.variables);
-    
-    return data;
-  } catch (error) {
-    console.error('Error fetching tokens:', error);
-    return null;
-  }
-};
-
-// Re-exportar para compatibilidad
 import { mepColors } from './colors.js';
 import { mepSpacing } from './spacing.js';
+import { mepTypography } from './typography.js';
+import { mepComponents, componentsByType } from './components.js';
 
-export { mepColors as colors, mepSpacing as spacing };
+export { 
+  mepColors, 
+  mepSpacing, 
+  mepTypography, 
+  mepComponents, 
+  componentsByType 
+};
+
+// Función para aplicar todos los tokens al DOM
+export const applyMEPTokens = () => {
+  const root = document.documentElement;
+  
+  // Aplicar colores como CSS custom properties
+  Object.entries(mepColors).forEach(([key, value]) => {
+    root.style.setProperty(`--mep-color-${key}`, value);
+  });
+  
+  // Aplicar espaciado
+  Object.entries(mepSpacing).forEach(([key, value]) => {
+    root.style.setProperty(`--mep-spacing-${key}`, value);
+  });
+  
+  console.log('🎨 MEP Design System aplicado al DOM');
+  console.log(`   - ${Object.keys(mepColors).length} colores`);
+  console.log(`   - ${Object.keys(mepSpacing).length} espaciados`);
+  console.log(`   - ${Object.keys(mepComponents).length} componentes`);
+};
+
+// Obtener estadísticas del design system
+export const getDesignSystemStats = () => ({
+  colors: Object.keys(mepColors).length,
+  spacing: Object.keys(mepSpacing).length,
+  typography: Object.keys(mepTypography).length,
+  components: Object.keys(mepComponents).length,
+  componentsByType: Object.fromEntries(
+    Object.entries(componentsByType).map(([type, comps]) => [type, Object.keys(comps).length])
+  )
+});
+
+export const mepTokens = {
+  colors: mepColors,
+  spacing: mepSpacing,
+  typography: mepTypography,
+  components: mepComponents
+};
+
+export default mepTokens;

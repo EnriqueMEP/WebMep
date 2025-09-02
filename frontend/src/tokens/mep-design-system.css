@@ -1,0 +1,1053 @@
+/*
+🎨 MEP Design System CSS
+Extraído automáticamente del Design System de Figma
+Generado: 2025-09-02T11:46:38.205Z
+
+Estadísticas:
+- Colores: 19
+- Espaciados: 179
+- Tipografías: 21
+- Componentes: 37
+*/
+
+:root {
+  /* 🎨 Colores del Design System */
+  --mep-color-badge_text: #8ddc7e;
+  --mep-color-variantprimary_sizesm: #3f762f;
+  --mep-color-labelsmall: #294a20;
+  --mep-color-variantsecondary_sizesm: #53af32;
+  --mep-color-badge_number: #fafafa;
+  --mep-color-badges: #dff0d9;
+  --mep-color-ocontaineruse: #ffffff;
+  --mep-color-rectangle_2: #212121;
+  --mep-color-bg: #92c482;
+  --mep-color-background: #000000;
+  --mep-color-vector: #68c85c;
+  --mep-color-statehover_sizemd: #35741e;
+  --mep-color-statedisabled_sizemd: #dbf8d4;
+  --mep-color-ellipse_1: #d9d9d9;
+  --mep-color-imgingcivil02: #a2a2a2;
+  --mep-color-ocontainer: #356028;
+  --mep-color-switchbg: #5e9e4b;
+  --mep-color-covers: #b8ecae;
+  --mep-color-design_system: #272525;
+  
+  /* 📏 Espaciado del Design System */
+  --mep-spacing-variantprimary_sizesmWidth: 16px;
+  --mep-spacing-variantprimary_sizesmHeight: 16px;
+  --mep-spacing-variantprimary_sizesmPaddingX: 24px;
+  --mep-spacing-variantprimary_sizesmPaddingY: 4px;
+  --mep-spacing-variantprimary_sizesmRadius: 4px;
+  --mep-spacing-variantprimary_sizemdWidth: 20px;
+  --mep-spacing-variantprimary_sizemdHeight: 20px;
+  --mep-spacing-variantprimary_sizemdPaddingX: 8px;
+  --mep-spacing-variantprimary_sizemdPaddingY: 2px;
+  --mep-spacing-variantprimary_sizemdRadius: 4px;
+  --mep-spacing-variantprimary_sizelgHeight: 28px;
+  --mep-spacing-variantprimary_sizelgPaddingX: 12px;
+  --mep-spacing-variantprimary_sizelgPaddingY: 2px;
+  --mep-spacing-variantprimary_sizelgRadius: 4px;
+  --mep-spacing-variantsecondary_sizesmWidth: 16px;
+  --mep-spacing-variantsecondary_sizesmHeight: 16px;
+  --mep-spacing-variantsecondary_sizesmPaddingX: 24px;
+  --mep-spacing-variantsecondary_sizesmPaddingY: 4px;
+  --mep-spacing-variantsecondary_sizesmRadius: 4px;
+  --mep-spacing-variantsecondary_sizemdWidth: 20px;
+  --mep-spacing-variantsecondary_sizemdHeight: 20px;
+  --mep-spacing-variantsecondary_sizemdPaddingX: 8px;
+  --mep-spacing-variantsecondary_sizemdPaddingY: 2px;
+  --mep-spacing-variantsecondary_sizemdRadius: 4px;
+  --mep-spacing-variantsecondary_sizelgHeight: 28px;
+  --mep-spacing-variantsecondary_sizelgPaddingX: 12px;
+  --mep-spacing-variantsecondary_sizelgPaddingY: 2px;
+  --mep-spacing-variantsecondary_sizelgRadius: 4px;
+  --mep-spacing-variantoutline_sizesmWidth: 16px;
+  --mep-spacing-variantoutline_sizesmHeight: 16px;
+  --mep-spacing-variantoutline_sizesmPaddingX: 24px;
+  --mep-spacing-variantoutline_sizesmPaddingY: 4px;
+  --mep-spacing-variantoutline_sizesmRadius: 4px;
+  --mep-spacing-variantoutline_sizemdWidth: 20px;
+  --mep-spacing-variantoutline_sizemdHeight: 20px;
+  --mep-spacing-variantoutline_sizemdPaddingX: 8px;
+  --mep-spacing-variantoutline_sizemdPaddingY: 2px;
+  --mep-spacing-variantoutline_sizemdRadius: 4px;
+  --mep-spacing-variantoutline_sizelgHeight: 28px;
+  --mep-spacing-variantoutline_sizelgPaddingX: 12px;
+  --mep-spacing-variantoutline_sizelgPaddingY: 2px;
+  --mep-spacing-variantoutline_sizelgRadius: 4px;
+  --mep-spacing-variantprimary_sizesmGap: 10px;
+  --mep-spacing-variantsecondary_sizesmGap: 10px;
+  --mep-spacing-variantoutline_sizesmGap: 10px;
+  --mep-spacing-variantprimary_sizemdGap: 10px;
+  --mep-spacing-variantsecondary_sizemdGap: 10px;
+  --mep-spacing-variantoutline_sizemdGap: 10px;
+  --mep-spacing-variantprimary_sizelgWidth: 28px;
+  --mep-spacing-variantprimary_sizelgGap: 10px;
+  --mep-spacing-variantsecondary_sizelgWidth: 28px;
+  --mep-spacing-variantsecondary_sizelgGap: 10px;
+  --mep-spacing-variantoutline_sizelgWidth: 28px;
+  --mep-spacing-variantoutline_sizelgGap: 10px;
+  --mep-spacing-badgesPaddingX: 100px;
+  --mep-spacing-badgesPaddingY: 24px;
+  --mep-spacing-badgesGap: 10px;
+  --mep-spacing-ocontainerGap: 4px;
+  --mep-spacing-ocontainertitleGap: 8px;
+  --mep-spacing-ocontaineruseHeight: 112px;
+  --mep-spacing-ocontainerusePaddingX: 24px;
+  --mep-spacing-ocontainerusePaddingY: 16px;
+  --mep-spacing-ocontaineruseGap: 16px;
+  --mep-spacing-ocontaineruseRadius: 8px;
+  --mep-spacing-ocontainerHeight: 38px;
+  --mep-spacing-statedefault_sizemdWidth: 110px;
+  --mep-spacing-statedefault_sizemdHeight: 40px;
+  --mep-spacing-statedefault_sizemdPaddingX: 16px;
+  --mep-spacing-statedefault_sizemdPaddingY: 8px;
+  --mep-spacing-statedefault_sizemdGap: 12px;
+  --mep-spacing-statehover_sizemdWidth: 110px;
+  --mep-spacing-statehover_sizemdHeight: 40px;
+  --mep-spacing-statehover_sizemdPaddingX: 16px;
+  --mep-spacing-statehover_sizemdPaddingY: 8px;
+  --mep-spacing-statehover_sizemdGap: 12px;
+  --mep-spacing-stateselect_sizemdWidth: 110px;
+  --mep-spacing-stateselect_sizemdHeight: 40px;
+  --mep-spacing-stateselect_sizemdPaddingX: 16px;
+  --mep-spacing-stateselect_sizemdPaddingY: 8px;
+  --mep-spacing-stateselect_sizemdGap: 12px;
+  --mep-spacing-statedisabled_sizemdWidth: 110px;
+  --mep-spacing-statedisabled_sizemdHeight: 40px;
+  --mep-spacing-statedisabled_sizemdPaddingX: 16px;
+  --mep-spacing-statedisabled_sizemdPaddingY: 8px;
+  --mep-spacing-statedisabled_sizemdGap: 12px;
+  --mep-spacing-statedefault_sizesmWidth: 63px;
+  --mep-spacing-statedefault_sizesmHeight: 32px;
+  --mep-spacing-statedefault_sizesmPaddingX: 12px;
+  --mep-spacing-statedefault_sizesmPaddingY: 8px;
+  --mep-spacing-statedefault_sizesmGap: 12px;
+  --mep-spacing-statedisabled_sizesmWidth: 63px;
+  --mep-spacing-statedisabled_sizesmHeight: 32px;
+  --mep-spacing-statedisabled_sizesmPaddingX: 12px;
+  --mep-spacing-statedisabled_sizesmPaddingY: 8px;
+  --mep-spacing-statedisabled_sizesmGap: 12px;
+  --mep-spacing-stateselect_sizesmWidth: 63px;
+  --mep-spacing-stateselect_sizesmHeight: 32px;
+  --mep-spacing-stateselect_sizesmPaddingX: 12px;
+  --mep-spacing-stateselect_sizesmPaddingY: 8px;
+  --mep-spacing-stateselect_sizesmGap: 12px;
+  --mep-spacing-statehover_sizesmWidth: 63px;
+  --mep-spacing-statehover_sizesmHeight: 32px;
+  --mep-spacing-statehover_sizesmPaddingX: 12px;
+  --mep-spacing-statehover_sizesmPaddingY: 8px;
+  --mep-spacing-statehover_sizesmGap: 12px;
+  --mep-spacing-statedefault_sizelgHeight: 48px;
+  --mep-spacing-statedefault_sizelgPaddingX: 20px;
+  --mep-spacing-statedefault_sizelgPaddingY: 8px;
+  --mep-spacing-statedefault_sizelgGap: 12px;
+  --mep-spacing-statedisabled_sizelgHeight: 48px;
+  --mep-spacing-statedisabled_sizelgPaddingX: 20px;
+  --mep-spacing-statedisabled_sizelgPaddingY: 8px;
+  --mep-spacing-statedisabled_sizelgGap: 12px;
+  --mep-spacing-stateselect_sizelgHeight: 48px;
+  --mep-spacing-stateselect_sizelgPaddingX: 20px;
+  --mep-spacing-stateselect_sizelgPaddingY: 8px;
+  --mep-spacing-stateselect_sizelgGap: 12px;
+  --mep-spacing-statehover_sizelgHeight: 48px;
+  --mep-spacing-statehover_sizelgPaddingX: 20px;
+  --mep-spacing-statehover_sizelgPaddingY: 8px;
+  --mep-spacing-statehover_sizelgGap: 12px;
+  --mep-spacing-statedefault_sizexlHeight: 56px;
+  --mep-spacing-statedefault_sizexlPaddingX: 24px;
+  --mep-spacing-statedefault_sizexlPaddingY: 8px;
+  --mep-spacing-statedefault_sizexlGap: 12px;
+  --mep-spacing-statedisabled_sizexlHeight: 56px;
+  --mep-spacing-statedisabled_sizexlPaddingX: 24px;
+  --mep-spacing-statedisabled_sizexlPaddingY: 8px;
+  --mep-spacing-statedisabled_sizexlGap: 12px;
+  --mep-spacing-statehover_sizexlHeight: 56px;
+  --mep-spacing-statehover_sizexlPaddingX: 24px;
+  --mep-spacing-statehover_sizexlPaddingY: 8px;
+  --mep-spacing-statehover_sizexlGap: 12px;
+  --mep-spacing-stateselect_sizexlHeight: 56px;
+  --mep-spacing-stateselect_sizexlPaddingX: 24px;
+  --mep-spacing-stateselect_sizexlPaddingY: 8px;
+  --mep-spacing-stateselect_sizexlGap: 12px;
+  --mep-spacing-buttonPaddingX: 40px;
+  --mep-spacing-buttonPaddingY: 24px;
+  --mep-spacing-buttonGap: 10px;
+  --mep-spacing-ocontainerPaddingX: 12px;
+  --mep-spacing-ocontainerPaddingY: 16px;
+  --mep-spacing-ocontainer_componentGap: 16px;
+  --mep-spacing-sizexlWidth: 48px;
+  --mep-spacing-sizexlHeight: 48px;
+  --mep-spacing-sizexlPaddingX: 10px;
+  --mep-spacing-sizexlPaddingY: 10px;
+  --mep-spacing-sizexlGap: 10px;
+  --mep-spacing-sizelgWidth: 32px;
+  --mep-spacing-sizelgHeight: 32px;
+  --mep-spacing-sizelgPaddingX: 10px;
+  --mep-spacing-sizelgPaddingY: 10px;
+  --mep-spacing-sizelgGap: 10px;
+  --mep-spacing-sizemdWidth: 24px;
+  --mep-spacing-sizemdHeight: 24px;
+  --mep-spacing-sizemdPaddingX: 10px;
+  --mep-spacing-sizemdPaddingY: 10px;
+  --mep-spacing-sizemdGap: 10px;
+  --mep-spacing-sizesmWidth: 16px;
+  --mep-spacing-sizesmHeight: 16px;
+  --mep-spacing-sizesmPaddingX: 10px;
+  --mep-spacing-sizesmPaddingY: 10px;
+  --mep-spacing-sizesmGap: 10px;
+  --mep-spacing-iconwrapperWidth: 16px;
+  --mep-spacing-iconwrapperHeight: 16px;
+  --mep-spacing-switchPaddingX: 100px;
+  --mep-spacing-switchPaddingY: 24px;
+  --mep-spacing-switchGap: 10px;
+  --mep-spacing-statetrue_sizesmWidth: 32px;
+  --mep-spacing-statetrue_sizesmHeight: 16px;
+  --mep-spacing-statetrue_sizemdWidth: 40px;
+  --mep-spacing-statetrue_sizemdHeight: 20px;
+  --mep-spacing-statetrue_sizemdPaddingX: 4px;
+  --mep-spacing-statetrue_sizemdPaddingY: 2px;
+  --mep-spacing-statetrue_sizemdGap: 10px;
+  --mep-spacing-statetrue_sizemdRadius: 80px;
+  --mep-spacing-statetrue_sizelgWidth: 48px;
+  --mep-spacing-statetrue_sizelgHeight: 24px;
+  --mep-spacing-wrappercoverGap: 10px;
+}
+
+/* 🎨 Utilidades de Color */
+.mep-bg-badge_text { background-color: var(--mep-color-badge_text); }
+.mep-text-badge_text { color: var(--mep-color-badge_text); }
+.mep-border-badge_text { border-color: var(--mep-color-badge_text); }
+.mep-bg-variantprimary_sizesm { background-color: var(--mep-color-variantprimary_sizesm); }
+.mep-text-variantprimary_sizesm { color: var(--mep-color-variantprimary_sizesm); }
+.mep-border-variantprimary_sizesm { border-color: var(--mep-color-variantprimary_sizesm); }
+.mep-bg-labelsmall { background-color: var(--mep-color-labelsmall); }
+.mep-text-labelsmall { color: var(--mep-color-labelsmall); }
+.mep-border-labelsmall { border-color: var(--mep-color-labelsmall); }
+.mep-bg-variantsecondary_sizesm { background-color: var(--mep-color-variantsecondary_sizesm); }
+.mep-text-variantsecondary_sizesm { color: var(--mep-color-variantsecondary_sizesm); }
+.mep-border-variantsecondary_sizesm { border-color: var(--mep-color-variantsecondary_sizesm); }
+.mep-bg-badge_number { background-color: var(--mep-color-badge_number); }
+.mep-text-badge_number { color: var(--mep-color-badge_number); }
+.mep-border-badge_number { border-color: var(--mep-color-badge_number); }
+.mep-bg-badges { background-color: var(--mep-color-badges); }
+.mep-text-badges { color: var(--mep-color-badges); }
+.mep-border-badges { border-color: var(--mep-color-badges); }
+.mep-bg-ocontaineruse { background-color: var(--mep-color-ocontaineruse); }
+.mep-text-ocontaineruse { color: var(--mep-color-ocontaineruse); }
+.mep-border-ocontaineruse { border-color: var(--mep-color-ocontaineruse); }
+.mep-bg-rectangle_2 { background-color: var(--mep-color-rectangle_2); }
+.mep-text-rectangle_2 { color: var(--mep-color-rectangle_2); }
+.mep-border-rectangle_2 { border-color: var(--mep-color-rectangle_2); }
+.mep-bg-bg { background-color: var(--mep-color-bg); }
+.mep-text-bg { color: var(--mep-color-bg); }
+.mep-border-bg { border-color: var(--mep-color-bg); }
+.mep-bg-background { background-color: var(--mep-color-background); }
+.mep-text-background { color: var(--mep-color-background); }
+.mep-border-background { border-color: var(--mep-color-background); }
+.mep-bg-vector { background-color: var(--mep-color-vector); }
+.mep-text-vector { color: var(--mep-color-vector); }
+.mep-border-vector { border-color: var(--mep-color-vector); }
+.mep-bg-statehover_sizemd { background-color: var(--mep-color-statehover_sizemd); }
+.mep-text-statehover_sizemd { color: var(--mep-color-statehover_sizemd); }
+.mep-border-statehover_sizemd { border-color: var(--mep-color-statehover_sizemd); }
+.mep-bg-statedisabled_sizemd { background-color: var(--mep-color-statedisabled_sizemd); }
+.mep-text-statedisabled_sizemd { color: var(--mep-color-statedisabled_sizemd); }
+.mep-border-statedisabled_sizemd { border-color: var(--mep-color-statedisabled_sizemd); }
+.mep-bg-ellipse_1 { background-color: var(--mep-color-ellipse_1); }
+.mep-text-ellipse_1 { color: var(--mep-color-ellipse_1); }
+.mep-border-ellipse_1 { border-color: var(--mep-color-ellipse_1); }
+.mep-bg-imgingcivil02 { background-color: var(--mep-color-imgingcivil02); }
+.mep-text-imgingcivil02 { color: var(--mep-color-imgingcivil02); }
+.mep-border-imgingcivil02 { border-color: var(--mep-color-imgingcivil02); }
+.mep-bg-ocontainer { background-color: var(--mep-color-ocontainer); }
+.mep-text-ocontainer { color: var(--mep-color-ocontainer); }
+.mep-border-ocontainer { border-color: var(--mep-color-ocontainer); }
+.mep-bg-switchbg { background-color: var(--mep-color-switchbg); }
+.mep-text-switchbg { color: var(--mep-color-switchbg); }
+.mep-border-switchbg { border-color: var(--mep-color-switchbg); }
+.mep-bg-covers { background-color: var(--mep-color-covers); }
+.mep-text-covers { color: var(--mep-color-covers); }
+.mep-border-covers { border-color: var(--mep-color-covers); }
+.mep-bg-design_system { background-color: var(--mep-color-design_system); }
+.mep-text-design_system { color: var(--mep-color-design_system); }
+.mep-border-design_system { border-color: var(--mep-color-design_system); }
+
+/* 📏 Utilidades de Espaciado */
+.mep-w-variantprimary_sizesm { width: var(--mep-spacing-variantprimary_sizesmWidth); }
+.mep-h-variantprimary_sizesm { height: var(--mep-spacing-variantprimary_sizesmHeight); }
+.mep-px-variantprimary_sizesm { padding-left: var(--mep-spacing-variantprimary_sizesmPaddingX); padding-right: var(--mep-spacing-variantprimary_sizesmPaddingX); }
+.mep-py-variantprimary_sizesm { padding-top: var(--mep-spacing-variantprimary_sizesmPaddingY); padding-bottom: var(--mep-spacing-variantprimary_sizesmPaddingY); }
+.mep-rounded-variantprimary_sizesm { border-radius: var(--mep-spacing-variantprimary_sizesmRadius); }
+.mep-w-variantprimary_sizemd { width: var(--mep-spacing-variantprimary_sizemdWidth); }
+.mep-h-variantprimary_sizemd { height: var(--mep-spacing-variantprimary_sizemdHeight); }
+.mep-px-variantprimary_sizemd { padding-left: var(--mep-spacing-variantprimary_sizemdPaddingX); padding-right: var(--mep-spacing-variantprimary_sizemdPaddingX); }
+.mep-py-variantprimary_sizemd { padding-top: var(--mep-spacing-variantprimary_sizemdPaddingY); padding-bottom: var(--mep-spacing-variantprimary_sizemdPaddingY); }
+.mep-rounded-variantprimary_sizemd { border-radius: var(--mep-spacing-variantprimary_sizemdRadius); }
+.mep-h-variantprimary_sizelg { height: var(--mep-spacing-variantprimary_sizelgHeight); }
+.mep-px-variantprimary_sizelg { padding-left: var(--mep-spacing-variantprimary_sizelgPaddingX); padding-right: var(--mep-spacing-variantprimary_sizelgPaddingX); }
+.mep-py-variantprimary_sizelg { padding-top: var(--mep-spacing-variantprimary_sizelgPaddingY); padding-bottom: var(--mep-spacing-variantprimary_sizelgPaddingY); }
+.mep-rounded-variantprimary_sizelg { border-radius: var(--mep-spacing-variantprimary_sizelgRadius); }
+.mep-w-variantsecondary_sizesm { width: var(--mep-spacing-variantsecondary_sizesmWidth); }
+.mep-h-variantsecondary_sizesm { height: var(--mep-spacing-variantsecondary_sizesmHeight); }
+.mep-px-variantsecondary_sizesm { padding-left: var(--mep-spacing-variantsecondary_sizesmPaddingX); padding-right: var(--mep-spacing-variantsecondary_sizesmPaddingX); }
+.mep-py-variantsecondary_sizesm { padding-top: var(--mep-spacing-variantsecondary_sizesmPaddingY); padding-bottom: var(--mep-spacing-variantsecondary_sizesmPaddingY); }
+.mep-rounded-variantsecondary_sizesm { border-radius: var(--mep-spacing-variantsecondary_sizesmRadius); }
+.mep-w-variantsecondary_sizemd { width: var(--mep-spacing-variantsecondary_sizemdWidth); }
+.mep-h-variantsecondary_sizemd { height: var(--mep-spacing-variantsecondary_sizemdHeight); }
+.mep-px-variantsecondary_sizemd { padding-left: var(--mep-spacing-variantsecondary_sizemdPaddingX); padding-right: var(--mep-spacing-variantsecondary_sizemdPaddingX); }
+.mep-py-variantsecondary_sizemd { padding-top: var(--mep-spacing-variantsecondary_sizemdPaddingY); padding-bottom: var(--mep-spacing-variantsecondary_sizemdPaddingY); }
+.mep-rounded-variantsecondary_sizemd { border-radius: var(--mep-spacing-variantsecondary_sizemdRadius); }
+.mep-h-variantsecondary_sizelg { height: var(--mep-spacing-variantsecondary_sizelgHeight); }
+.mep-px-variantsecondary_sizelg { padding-left: var(--mep-spacing-variantsecondary_sizelgPaddingX); padding-right: var(--mep-spacing-variantsecondary_sizelgPaddingX); }
+.mep-py-variantsecondary_sizelg { padding-top: var(--mep-spacing-variantsecondary_sizelgPaddingY); padding-bottom: var(--mep-spacing-variantsecondary_sizelgPaddingY); }
+.mep-rounded-variantsecondary_sizelg { border-radius: var(--mep-spacing-variantsecondary_sizelgRadius); }
+.mep-w-variantoutline_sizesm { width: var(--mep-spacing-variantoutline_sizesmWidth); }
+.mep-h-variantoutline_sizesm { height: var(--mep-spacing-variantoutline_sizesmHeight); }
+.mep-px-variantoutline_sizesm { padding-left: var(--mep-spacing-variantoutline_sizesmPaddingX); padding-right: var(--mep-spacing-variantoutline_sizesmPaddingX); }
+.mep-py-variantoutline_sizesm { padding-top: var(--mep-spacing-variantoutline_sizesmPaddingY); padding-bottom: var(--mep-spacing-variantoutline_sizesmPaddingY); }
+.mep-rounded-variantoutline_sizesm { border-radius: var(--mep-spacing-variantoutline_sizesmRadius); }
+.mep-w-variantoutline_sizemd { width: var(--mep-spacing-variantoutline_sizemdWidth); }
+.mep-h-variantoutline_sizemd { height: var(--mep-spacing-variantoutline_sizemdHeight); }
+.mep-px-variantoutline_sizemd { padding-left: var(--mep-spacing-variantoutline_sizemdPaddingX); padding-right: var(--mep-spacing-variantoutline_sizemdPaddingX); }
+.mep-py-variantoutline_sizemd { padding-top: var(--mep-spacing-variantoutline_sizemdPaddingY); padding-bottom: var(--mep-spacing-variantoutline_sizemdPaddingY); }
+.mep-rounded-variantoutline_sizemd { border-radius: var(--mep-spacing-variantoutline_sizemdRadius); }
+.mep-h-variantoutline_sizelg { height: var(--mep-spacing-variantoutline_sizelgHeight); }
+.mep-px-variantoutline_sizelg { padding-left: var(--mep-spacing-variantoutline_sizelgPaddingX); padding-right: var(--mep-spacing-variantoutline_sizelgPaddingX); }
+.mep-py-variantoutline_sizelg { padding-top: var(--mep-spacing-variantoutline_sizelgPaddingY); padding-bottom: var(--mep-spacing-variantoutline_sizelgPaddingY); }
+.mep-rounded-variantoutline_sizelg { border-radius: var(--mep-spacing-variantoutline_sizelgRadius); }
+.mep-gap-variantprimary_sizesm { gap: var(--mep-spacing-variantprimary_sizesmGap); }
+.mep-gap-variantsecondary_sizesm { gap: var(--mep-spacing-variantsecondary_sizesmGap); }
+.mep-gap-variantoutline_sizesm { gap: var(--mep-spacing-variantoutline_sizesmGap); }
+.mep-gap-variantprimary_sizemd { gap: var(--mep-spacing-variantprimary_sizemdGap); }
+.mep-gap-variantsecondary_sizemd { gap: var(--mep-spacing-variantsecondary_sizemdGap); }
+.mep-gap-variantoutline_sizemd { gap: var(--mep-spacing-variantoutline_sizemdGap); }
+.mep-w-variantprimary_sizelg { width: var(--mep-spacing-variantprimary_sizelgWidth); }
+.mep-gap-variantprimary_sizelg { gap: var(--mep-spacing-variantprimary_sizelgGap); }
+.mep-w-variantsecondary_sizelg { width: var(--mep-spacing-variantsecondary_sizelgWidth); }
+.mep-gap-variantsecondary_sizelg { gap: var(--mep-spacing-variantsecondary_sizelgGap); }
+.mep-w-variantoutline_sizelg { width: var(--mep-spacing-variantoutline_sizelgWidth); }
+.mep-gap-variantoutline_sizelg { gap: var(--mep-spacing-variantoutline_sizelgGap); }
+.mep-px-badges { padding-left: var(--mep-spacing-badgesPaddingX); padding-right: var(--mep-spacing-badgesPaddingX); }
+.mep-py-badges { padding-top: var(--mep-spacing-badgesPaddingY); padding-bottom: var(--mep-spacing-badgesPaddingY); }
+.mep-gap-badges { gap: var(--mep-spacing-badgesGap); }
+.mep-gap-ocontainer { gap: var(--mep-spacing-ocontainerGap); }
+.mep-gap-ocontainertitle { gap: var(--mep-spacing-ocontainertitleGap); }
+.mep-h-ocontaineruse { height: var(--mep-spacing-ocontaineruseHeight); }
+.mep-px-ocontaineruse { padding-left: var(--mep-spacing-ocontainerusePaddingX); padding-right: var(--mep-spacing-ocontainerusePaddingX); }
+.mep-py-ocontaineruse { padding-top: var(--mep-spacing-ocontainerusePaddingY); padding-bottom: var(--mep-spacing-ocontainerusePaddingY); }
+.mep-gap-ocontaineruse { gap: var(--mep-spacing-ocontaineruseGap); }
+.mep-rounded-ocontaineruse { border-radius: var(--mep-spacing-ocontaineruseRadius); }
+.mep-h-ocontainer { height: var(--mep-spacing-ocontainerHeight); }
+.mep-w-statedefault_sizemd { width: var(--mep-spacing-statedefault_sizemdWidth); }
+.mep-h-statedefault_sizemd { height: var(--mep-spacing-statedefault_sizemdHeight); }
+.mep-px-statedefault_sizemd { padding-left: var(--mep-spacing-statedefault_sizemdPaddingX); padding-right: var(--mep-spacing-statedefault_sizemdPaddingX); }
+.mep-py-statedefault_sizemd { padding-top: var(--mep-spacing-statedefault_sizemdPaddingY); padding-bottom: var(--mep-spacing-statedefault_sizemdPaddingY); }
+.mep-gap-statedefault_sizemd { gap: var(--mep-spacing-statedefault_sizemdGap); }
+.mep-w-statehover_sizemd { width: var(--mep-spacing-statehover_sizemdWidth); }
+.mep-h-statehover_sizemd { height: var(--mep-spacing-statehover_sizemdHeight); }
+.mep-px-statehover_sizemd { padding-left: var(--mep-spacing-statehover_sizemdPaddingX); padding-right: var(--mep-spacing-statehover_sizemdPaddingX); }
+.mep-py-statehover_sizemd { padding-top: var(--mep-spacing-statehover_sizemdPaddingY); padding-bottom: var(--mep-spacing-statehover_sizemdPaddingY); }
+.mep-gap-statehover_sizemd { gap: var(--mep-spacing-statehover_sizemdGap); }
+.mep-w-stateselect_sizemd { width: var(--mep-spacing-stateselect_sizemdWidth); }
+.mep-h-stateselect_sizemd { height: var(--mep-spacing-stateselect_sizemdHeight); }
+.mep-px-stateselect_sizemd { padding-left: var(--mep-spacing-stateselect_sizemdPaddingX); padding-right: var(--mep-spacing-stateselect_sizemdPaddingX); }
+.mep-py-stateselect_sizemd { padding-top: var(--mep-spacing-stateselect_sizemdPaddingY); padding-bottom: var(--mep-spacing-stateselect_sizemdPaddingY); }
+.mep-gap-stateselect_sizemd { gap: var(--mep-spacing-stateselect_sizemdGap); }
+.mep-w-statedisabled_sizemd { width: var(--mep-spacing-statedisabled_sizemdWidth); }
+.mep-h-statedisabled_sizemd { height: var(--mep-spacing-statedisabled_sizemdHeight); }
+.mep-px-statedisabled_sizemd { padding-left: var(--mep-spacing-statedisabled_sizemdPaddingX); padding-right: var(--mep-spacing-statedisabled_sizemdPaddingX); }
+.mep-py-statedisabled_sizemd { padding-top: var(--mep-spacing-statedisabled_sizemdPaddingY); padding-bottom: var(--mep-spacing-statedisabled_sizemdPaddingY); }
+.mep-gap-statedisabled_sizemd { gap: var(--mep-spacing-statedisabled_sizemdGap); }
+.mep-w-statedefault_sizesm { width: var(--mep-spacing-statedefault_sizesmWidth); }
+.mep-h-statedefault_sizesm { height: var(--mep-spacing-statedefault_sizesmHeight); }
+.mep-px-statedefault_sizesm { padding-left: var(--mep-spacing-statedefault_sizesmPaddingX); padding-right: var(--mep-spacing-statedefault_sizesmPaddingX); }
+.mep-py-statedefault_sizesm { padding-top: var(--mep-spacing-statedefault_sizesmPaddingY); padding-bottom: var(--mep-spacing-statedefault_sizesmPaddingY); }
+.mep-gap-statedefault_sizesm { gap: var(--mep-spacing-statedefault_sizesmGap); }
+.mep-w-statedisabled_sizesm { width: var(--mep-spacing-statedisabled_sizesmWidth); }
+.mep-h-statedisabled_sizesm { height: var(--mep-spacing-statedisabled_sizesmHeight); }
+.mep-px-statedisabled_sizesm { padding-left: var(--mep-spacing-statedisabled_sizesmPaddingX); padding-right: var(--mep-spacing-statedisabled_sizesmPaddingX); }
+.mep-py-statedisabled_sizesm { padding-top: var(--mep-spacing-statedisabled_sizesmPaddingY); padding-bottom: var(--mep-spacing-statedisabled_sizesmPaddingY); }
+.mep-gap-statedisabled_sizesm { gap: var(--mep-spacing-statedisabled_sizesmGap); }
+.mep-w-stateselect_sizesm { width: var(--mep-spacing-stateselect_sizesmWidth); }
+.mep-h-stateselect_sizesm { height: var(--mep-spacing-stateselect_sizesmHeight); }
+.mep-px-stateselect_sizesm { padding-left: var(--mep-spacing-stateselect_sizesmPaddingX); padding-right: var(--mep-spacing-stateselect_sizesmPaddingX); }
+.mep-py-stateselect_sizesm { padding-top: var(--mep-spacing-stateselect_sizesmPaddingY); padding-bottom: var(--mep-spacing-stateselect_sizesmPaddingY); }
+.mep-gap-stateselect_sizesm { gap: var(--mep-spacing-stateselect_sizesmGap); }
+.mep-w-statehover_sizesm { width: var(--mep-spacing-statehover_sizesmWidth); }
+.mep-h-statehover_sizesm { height: var(--mep-spacing-statehover_sizesmHeight); }
+.mep-px-statehover_sizesm { padding-left: var(--mep-spacing-statehover_sizesmPaddingX); padding-right: var(--mep-spacing-statehover_sizesmPaddingX); }
+.mep-py-statehover_sizesm { padding-top: var(--mep-spacing-statehover_sizesmPaddingY); padding-bottom: var(--mep-spacing-statehover_sizesmPaddingY); }
+.mep-gap-statehover_sizesm { gap: var(--mep-spacing-statehover_sizesmGap); }
+.mep-h-statedefault_sizelg { height: var(--mep-spacing-statedefault_sizelgHeight); }
+.mep-px-statedefault_sizelg { padding-left: var(--mep-spacing-statedefault_sizelgPaddingX); padding-right: var(--mep-spacing-statedefault_sizelgPaddingX); }
+.mep-py-statedefault_sizelg { padding-top: var(--mep-spacing-statedefault_sizelgPaddingY); padding-bottom: var(--mep-spacing-statedefault_sizelgPaddingY); }
+.mep-gap-statedefault_sizelg { gap: var(--mep-spacing-statedefault_sizelgGap); }
+.mep-h-statedisabled_sizelg { height: var(--mep-spacing-statedisabled_sizelgHeight); }
+.mep-px-statedisabled_sizelg { padding-left: var(--mep-spacing-statedisabled_sizelgPaddingX); padding-right: var(--mep-spacing-statedisabled_sizelgPaddingX); }
+.mep-py-statedisabled_sizelg { padding-top: var(--mep-spacing-statedisabled_sizelgPaddingY); padding-bottom: var(--mep-spacing-statedisabled_sizelgPaddingY); }
+.mep-gap-statedisabled_sizelg { gap: var(--mep-spacing-statedisabled_sizelgGap); }
+.mep-h-stateselect_sizelg { height: var(--mep-spacing-stateselect_sizelgHeight); }
+.mep-px-stateselect_sizelg { padding-left: var(--mep-spacing-stateselect_sizelgPaddingX); padding-right: var(--mep-spacing-stateselect_sizelgPaddingX); }
+.mep-py-stateselect_sizelg { padding-top: var(--mep-spacing-stateselect_sizelgPaddingY); padding-bottom: var(--mep-spacing-stateselect_sizelgPaddingY); }
+.mep-gap-stateselect_sizelg { gap: var(--mep-spacing-stateselect_sizelgGap); }
+.mep-h-statehover_sizelg { height: var(--mep-spacing-statehover_sizelgHeight); }
+.mep-px-statehover_sizelg { padding-left: var(--mep-spacing-statehover_sizelgPaddingX); padding-right: var(--mep-spacing-statehover_sizelgPaddingX); }
+.mep-py-statehover_sizelg { padding-top: var(--mep-spacing-statehover_sizelgPaddingY); padding-bottom: var(--mep-spacing-statehover_sizelgPaddingY); }
+.mep-gap-statehover_sizelg { gap: var(--mep-spacing-statehover_sizelgGap); }
+.mep-h-statedefault_sizexl { height: var(--mep-spacing-statedefault_sizexlHeight); }
+.mep-px-statedefault_sizexl { padding-left: var(--mep-spacing-statedefault_sizexlPaddingX); padding-right: var(--mep-spacing-statedefault_sizexlPaddingX); }
+.mep-py-statedefault_sizexl { padding-top: var(--mep-spacing-statedefault_sizexlPaddingY); padding-bottom: var(--mep-spacing-statedefault_sizexlPaddingY); }
+.mep-gap-statedefault_sizexl { gap: var(--mep-spacing-statedefault_sizexlGap); }
+.mep-h-statedisabled_sizexl { height: var(--mep-spacing-statedisabled_sizexlHeight); }
+.mep-px-statedisabled_sizexl { padding-left: var(--mep-spacing-statedisabled_sizexlPaddingX); padding-right: var(--mep-spacing-statedisabled_sizexlPaddingX); }
+.mep-py-statedisabled_sizexl { padding-top: var(--mep-spacing-statedisabled_sizexlPaddingY); padding-bottom: var(--mep-spacing-statedisabled_sizexlPaddingY); }
+.mep-gap-statedisabled_sizexl { gap: var(--mep-spacing-statedisabled_sizexlGap); }
+.mep-h-statehover_sizexl { height: var(--mep-spacing-statehover_sizexlHeight); }
+.mep-px-statehover_sizexl { padding-left: var(--mep-spacing-statehover_sizexlPaddingX); padding-right: var(--mep-spacing-statehover_sizexlPaddingX); }
+.mep-py-statehover_sizexl { padding-top: var(--mep-spacing-statehover_sizexlPaddingY); padding-bottom: var(--mep-spacing-statehover_sizexlPaddingY); }
+.mep-gap-statehover_sizexl { gap: var(--mep-spacing-statehover_sizexlGap); }
+.mep-h-stateselect_sizexl { height: var(--mep-spacing-stateselect_sizexlHeight); }
+.mep-px-stateselect_sizexl { padding-left: var(--mep-spacing-stateselect_sizexlPaddingX); padding-right: var(--mep-spacing-stateselect_sizexlPaddingX); }
+.mep-py-stateselect_sizexl { padding-top: var(--mep-spacing-stateselect_sizexlPaddingY); padding-bottom: var(--mep-spacing-stateselect_sizexlPaddingY); }
+.mep-gap-stateselect_sizexl { gap: var(--mep-spacing-stateselect_sizexlGap); }
+.mep-px-button { padding-left: var(--mep-spacing-buttonPaddingX); padding-right: var(--mep-spacing-buttonPaddingX); }
+.mep-py-button { padding-top: var(--mep-spacing-buttonPaddingY); padding-bottom: var(--mep-spacing-buttonPaddingY); }
+.mep-gap-button { gap: var(--mep-spacing-buttonGap); }
+.mep-px-ocontainer { padding-left: var(--mep-spacing-ocontainerPaddingX); padding-right: var(--mep-spacing-ocontainerPaddingX); }
+.mep-py-ocontainer { padding-top: var(--mep-spacing-ocontainerPaddingY); padding-bottom: var(--mep-spacing-ocontainerPaddingY); }
+.mep-gap-ocontainer_component { gap: var(--mep-spacing-ocontainer_componentGap); }
+.mep-w-sizexl { width: var(--mep-spacing-sizexlWidth); }
+.mep-h-sizexl { height: var(--mep-spacing-sizexlHeight); }
+.mep-px-sizexl { padding-left: var(--mep-spacing-sizexlPaddingX); padding-right: var(--mep-spacing-sizexlPaddingX); }
+.mep-py-sizexl { padding-top: var(--mep-spacing-sizexlPaddingY); padding-bottom: var(--mep-spacing-sizexlPaddingY); }
+.mep-gap-sizexl { gap: var(--mep-spacing-sizexlGap); }
+.mep-w-sizelg { width: var(--mep-spacing-sizelgWidth); }
+.mep-h-sizelg { height: var(--mep-spacing-sizelgHeight); }
+.mep-px-sizelg { padding-left: var(--mep-spacing-sizelgPaddingX); padding-right: var(--mep-spacing-sizelgPaddingX); }
+.mep-py-sizelg { padding-top: var(--mep-spacing-sizelgPaddingY); padding-bottom: var(--mep-spacing-sizelgPaddingY); }
+.mep-gap-sizelg { gap: var(--mep-spacing-sizelgGap); }
+.mep-w-sizemd { width: var(--mep-spacing-sizemdWidth); }
+.mep-h-sizemd { height: var(--mep-spacing-sizemdHeight); }
+.mep-px-sizemd { padding-left: var(--mep-spacing-sizemdPaddingX); padding-right: var(--mep-spacing-sizemdPaddingX); }
+.mep-py-sizemd { padding-top: var(--mep-spacing-sizemdPaddingY); padding-bottom: var(--mep-spacing-sizemdPaddingY); }
+.mep-gap-sizemd { gap: var(--mep-spacing-sizemdGap); }
+.mep-w-sizesm { width: var(--mep-spacing-sizesmWidth); }
+.mep-h-sizesm { height: var(--mep-spacing-sizesmHeight); }
+.mep-px-sizesm { padding-left: var(--mep-spacing-sizesmPaddingX); padding-right: var(--mep-spacing-sizesmPaddingX); }
+.mep-py-sizesm { padding-top: var(--mep-spacing-sizesmPaddingY); padding-bottom: var(--mep-spacing-sizesmPaddingY); }
+.mep-gap-sizesm { gap: var(--mep-spacing-sizesmGap); }
+.mep-w-iconwrapper { width: var(--mep-spacing-iconwrapperWidth); }
+.mep-h-iconwrapper { height: var(--mep-spacing-iconwrapperHeight); }
+.mep-px-switch { padding-left: var(--mep-spacing-switchPaddingX); padding-right: var(--mep-spacing-switchPaddingX); }
+.mep-py-switch { padding-top: var(--mep-spacing-switchPaddingY); padding-bottom: var(--mep-spacing-switchPaddingY); }
+.mep-gap-switch { gap: var(--mep-spacing-switchGap); }
+.mep-w-statetrue_sizesm { width: var(--mep-spacing-statetrue_sizesmWidth); }
+.mep-h-statetrue_sizesm { height: var(--mep-spacing-statetrue_sizesmHeight); }
+.mep-w-statetrue_sizemd { width: var(--mep-spacing-statetrue_sizemdWidth); }
+.mep-h-statetrue_sizemd { height: var(--mep-spacing-statetrue_sizemdHeight); }
+.mep-px-statetrue_sizemd { padding-left: var(--mep-spacing-statetrue_sizemdPaddingX); padding-right: var(--mep-spacing-statetrue_sizemdPaddingX); }
+.mep-py-statetrue_sizemd { padding-top: var(--mep-spacing-statetrue_sizemdPaddingY); padding-bottom: var(--mep-spacing-statetrue_sizemdPaddingY); }
+.mep-gap-statetrue_sizemd { gap: var(--mep-spacing-statetrue_sizemdGap); }
+.mep-rounded-statetrue_sizemd { border-radius: var(--mep-spacing-statetrue_sizemdRadius); }
+.mep-w-statetrue_sizelg { width: var(--mep-spacing-statetrue_sizelgWidth); }
+.mep-h-statetrue_sizelg { height: var(--mep-spacing-statetrue_sizelgHeight); }
+.mep-gap-wrappercover { gap: var(--mep-spacing-wrappercoverGap); }
+
+/* ✍️ Estilos de Tipografía */
+.mep-text-labelsmall {
+  font-family: Ubuntu;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+.mep-text-badge {
+  font-family: Ubuntu;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 73.53600311279297px;
+  letter-spacing: normal;
+}
+
+.mep-text-el_badge_es_un_pequeo_indicador_visual_que_comunic {
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.788000106811523px;
+  letter-spacing: normal;
+}
+
+.mep-text-para_resaltar_informacin_secundaria_o_de_apoyo {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.086000442504883px;
+  letter-spacing: normal;
+}
+
+.mep-text-no_usarlos_como_cta_o_accin_interactiva {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.086000442504883px;
+  letter-spacing: normal;
+}
+
+.mep-text-no_sobrecargar_con_texto_largo {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.086000442504883px;
+  letter-spacing: normal;
+}
+
+.mep-text-background {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+.mep-text-surfaceoutline {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+.mep-text-surfacefill {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+.mep-text-button {
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+.mep-text-el_button_es_el_componente_interactivo_principal_d {
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.788000106811523px;
+  letter-spacing: normal;
+}
+
+.mep-text-no_pueden_convivir_dos_variantes_del_mismo_tipo {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.086000442504883px;
+  letter-spacing: normal;
+}
+
+.mep-text-titlemediumemphasis {
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+.mep-text-bodysmall {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+.mep-text-titlesmallemphasis {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+.mep-text-card {
+  font-family: Ubuntu;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 73.53600311279297px;
+  letter-spacing: normal;
+}
+
+.mep-text-el_button_permite_a_los_usuarios_ejecutar_acciones {
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.788000106811523px;
+  letter-spacing: normal;
+}
+
+.mep-text-switch {
+  font-family: Ubuntu;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 73.53600311279297px;
+  letter-spacing: normal;
+}
+
+.mep-text-design_system {
+  font-family: Reckless TRIAL;
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 197.10000610351562px;
+  letter-spacing: normal;
+}
+
+.mep-text-proyecto {
+  font-family: Uber Move Text;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57.263999938964844px;
+  letter-spacing: normal;
+}
+
+.mep-text-cactus_ds {
+  font-family: Reckless TRIAL;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 131.40000915527344px;
+  letter-spacing: normal;
+}
+
+/* 🧩 Componentes del Design System */
+.mep-component-variantprimary_sizesm {
+  background-color: #3f762f;
+  
+  
+  border-radius: 4px;
+  
+  width: 16px;
+  height: 16px;
+  
+}
+
+.mep-component-variantprimary_sizemd {
+  background-color: #3f762f;
+  
+  
+  border-radius: 4px;
+  
+  width: 20px;
+  height: 20px;
+  
+}
+
+.mep-component-variantprimary_sizelg {
+  background-color: #3f762f;
+  
+  
+  border-radius: 4px;
+  
+  width: 28px;
+  height: 28px;
+  
+}
+
+.mep-component-variantsecondary_sizesm {
+  background-color: #53af32;
+  
+  
+  border-radius: 4px;
+  
+  width: 16px;
+  height: 16px;
+  
+}
+
+.mep-component-variantsecondary_sizemd {
+  background-color: #53af32;
+  
+  
+  border-radius: 4px;
+  
+  width: 20px;
+  height: 20px;
+  
+}
+
+.mep-component-variantsecondary_sizelg {
+  background-color: #53af32;
+  
+  
+  border-radius: 4px;
+  
+  width: 28px;
+  height: 28px;
+  
+}
+
+.mep-component-variantoutline_sizesm {
+  
+  border-color: #3f762f;
+  border-width: 1px;
+  border-radius: 4px;
+  
+  width: 16px;
+  height: 16px;
+  
+}
+
+.mep-component-variantoutline_sizemd {
+  
+  border-color: #3f762f;
+  border-width: 1px;
+  border-radius: 4px;
+  
+  width: 20px;
+  height: 20px;
+  
+}
+
+.mep-component-variantoutline_sizelg {
+  
+  border-color: #3f762f;
+  border-width: 1px;
+  border-radius: 4px;
+  
+  width: 28px;
+  height: 28px;
+  
+}
+
+.mep-component-statedefault_sizemd {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 142px;
+  height: 40px;
+  
+}
+
+.mep-component-statehover_sizemd {
+  background-color: #294a20;
+  
+  
+  
+  
+  width: 142px;
+  height: 40px;
+  
+}
+
+.mep-component-stateselect_sizemd {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 142px;
+  height: 40px;
+  
+}
+
+.mep-component-statedisabled_sizemd {
+  background-color: #bbddb1;
+  
+  
+  
+  
+  width: 142px;
+  height: 40px;
+  
+}
+
+.mep-component-statedefault_sizesm {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 119px;
+  height: 32px;
+  
+}
+
+.mep-component-statedisabled_sizesm {
+  background-color: #bbddb1;
+  
+  
+  
+  
+  width: 119px;
+  height: 32px;
+  
+}
+
+.mep-component-stateselect_sizesm {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 119px;
+  height: 32px;
+  
+}
+
+.mep-component-statehover_sizesm {
+  background-color: #294a20;
+  
+  
+  
+  
+  width: 119px;
+  height: 32px;
+  
+}
+
+.mep-component-statedefault_sizelg {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 164px;
+  height: 48px;
+  
+}
+
+.mep-component-statedisabled_sizelg {
+  background-color: #bbddb1;
+  
+  
+  
+  
+  width: 164px;
+  height: 48px;
+  
+}
+
+.mep-component-stateselect_sizelg {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 164px;
+  height: 48px;
+  
+}
+
+.mep-component-statehover_sizelg {
+  background-color: #294a20;
+  
+  
+  
+  
+  width: 164px;
+  height: 48px;
+  
+}
+
+.mep-component-statedefault_sizexl {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 196px;
+  height: 56px;
+  
+}
+
+.mep-component-statedisabled_sizexl {
+  background-color: #bbddb1;
+  
+  
+  
+  
+  width: 196px;
+  height: 56px;
+  
+}
+
+.mep-component-statehover_sizexl {
+  background-color: #294a20;
+  
+  
+  
+  
+  width: 196px;
+  height: 56px;
+  
+}
+
+.mep-component-stateselect_sizexl {
+  background-color: #3f762f;
+  
+  
+  
+  
+  width: 196px;
+  height: 56px;
+  
+}
+
+.mep-component-sizexl {
+  background-color: #ffffff;
+  
+  
+  
+  
+  width: 48px;
+  height: 48px;
+  
+}
+
+.mep-component-sizelg {
+  background-color: #ffffff;
+  
+  
+  
+  
+  width: 32px;
+  height: 32px;
+  
+}
+
+.mep-component-sizemd {
+  background-color: #ffffff;
+  
+  
+  
+  
+  width: 24px;
+  height: 24px;
+  
+}
+
+.mep-component-sizesm {
+  background-color: #ffffff;
+  
+  
+  
+  
+  width: 16px;
+  height: 16px;
+  
+}
+
+.mep-component-iconwrapper {
+  background-color: #ffffff;
+  
+  
+  
+  
+  width: 16px;
+  height: 16px;
+  
+}
+
+.mep-component-typevertical_sizesm {
+  
+  
+  
+  
+  
+  width: 180px;
+  height: 240px;
+  
+}
+
+.mep-component-typevertical_sizemd {
+  
+  
+  
+  
+  
+  width: 260px;
+  height: 320px;
+  
+}
+
+.mep-component-typevertical_sizelg {
+  
+  
+  
+  
+  
+  width: 380px;
+  height: 481px;
+  
+}
+
+.mep-component-typehorizontal_sizesm {
+  
+  
+  
+  
+  
+  width: 354px;
+  height: 154px;
+  
+}
+
+.mep-component-statetrue_sizesm {
+  
+  
+  
+  
+  
+  width: 32px;
+  height: 16px;
+  
+}
+
+.mep-component-statetrue_sizemd {
+  background-color: #53af32;
+  
+  
+  border-radius: 80px;
+  
+  width: 40px;
+  height: 20px;
+  
+}
+
+.mep-component-statetrue_sizelg {
+  
+  
+  
+  
+  
+  width: 48px;
+  height: 24px;
+  
+}
+
+/* 🎯 Clases de utilidad generales */
+.mep-design-system-ready {
+  --mep-version: "1.0.0";
+  --mep-source: "figma";
+  --mep-generated: "2025-09-02T11:46:38.205Z";
+}
+
+.mep-hidden { display: none !important; }
+.mep-block { display: block !important; }
+.mep-flex { display: flex !important; }
+.mep-grid { display: grid !important; }
+.mep-relative { position: relative !important; }
+.mep-absolute { position: absolute !important; }
+.mep-fixed { position: fixed !important; }
+.mep-sticky { position: sticky !important; }
+
+/* Animaciones sutiles */
+.mep-transition { transition: all 0.2s ease; }
+.mep-hover-lift:hover { transform: translateY(-2px); }
+.mep-hover-scale:hover { transform: scale(1.05); }

@@ -3,7 +3,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import MEPFigmaSync from './figma-sync.js';
+import MEPFigmaSyncSimple from './figma-sync-simple.js';
 
 // Cargar variables de entorno
 dotenv.config({ path: '../.env' });
@@ -88,7 +88,7 @@ app.post('/figma-webhook', express.raw({ type: 'application/json' }), async (req
       }
     }
 
-    const figmaSync = new MEPFigmaSync();
+    const figmaSync = new MEPFigmaSyncSimple();
     const result = await figmaSync.syncAll();
     
     // Notificar a todos los navegadores conectados
@@ -128,7 +128,7 @@ io.on('connection', (socket) => {
 app.get('/sync-tokens', async (req, res) => {
   try {
     console.log('🔄 Sincronización manual iniciada...');
-    const figmaSync = new MEPFigmaSync();
+    const figmaSync = new MEPFigmaSyncSimple();
     const result = await figmaSync.syncAll();
     
     // Notificar via WebSocket
@@ -152,7 +152,7 @@ app.get('/sync-tokens', async (req, res) => {
 // Nueva ruta para obtener el estado actual de los tokens
 app.get('/api/tokens', async (req, res) => {
   try {
-    const figmaSync = new MEPFigmaSync();
+    const figmaSync = new MEPFigmaSyncSimple();
     const result = await figmaSync.syncAll();
     res.json(result);
   } catch (error) {
