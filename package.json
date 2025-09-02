@@ -1,0 +1,17 @@
+{
+  "name": "mep-projects-complete",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:server": "cd server && nodemon webhook-server.js",
+    "build": "npm run build:frontend && npm run build:api",
+    "start:prod": "concurrently \"npm run start:figma\" \"npm run start:api\"",
+    "add-auth": "node scripts/add-authentication.js",
+    "add-database": "node scripts/setup-database.js",
+    "add-admin": "node scripts/create-admin.js"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
