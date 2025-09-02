@@ -67,22 +67,40 @@ app.post('/api/auth/login', (req, res) => {
 });
 
 // 🎨 Webhook para cambios de Figma
-app.post('/figma-webhook', async (req, res) => {
+app.post('/figma-webhook', express.raw({ type: 'application/json' }), async (req, res) => {
   console.log('🔄 Figma cambió - actualizando MEP-Projects...');
   
   try {
+    // Verificar firma del webhook si está configurada
+    const signature = req.headers['x-figma-signature'];
+    const webhookSecret = process.env.WEBHOOK_SECRET;
+    
+    if (webhookSecret && signature) {
+      const crypto = await import('crypto');
+      const expectedSignature = crypto.default
+        .createHmac('sha256', webhookSecret)
+        .update(req.body, 'utf8')
+        .digest('hex');
+      
+      if (signature !== expectedSignature) {
+        console.log('❌ Firma de webhook inválida');
+        return res.status(401).json({ error: 'Invalid signature' });
+      }
+    }
+
     const figmaSync = new MEPFigmaSync();
-    const tokens = await figmaSync.syncTokens();
+    const result = await figmaSync.syncAll();
     
     // Notificar a todos los navegadores conectados
     io.emit('mep-tokens-updated', {
       timestamp: new Date(),
-      message: '🎨 Design tokens updated!',
-      tokensCount: Object.keys(tokens.colors).length + Object.keys(tokens.spacing).length
+      message: '🎨 Design tokens updated from Figma!',
+      tokensCount: Object.keys(result.variables.colors).length + Object.keys(result.variables.spacing).length,
+      data: result
     });
 
     console.log(`📡 ${activeConnections} usuarios notificados`);
-    res.json({ success: true, message: 'MEP tokens updated' });
+    res.json({ success: true, message: 'MEP tokens updated', result });
     
   } catch (error) {
     console.error('❌ Error webhook:', error);
@@ -109,9 +127,34 @@ io.on('connection', (socket) => {
 // 🔄 Sync manual
 app.get('/sync-tokens', async (req, res) => {
   try {
+    console.log('🔄 Sincronización manual iniciada...');
     const figmaSync = new MEPFigmaSync();
-    const tokens = await figmaSync.syncTokens();
-    res.json({ success: true, tokens });
+    const result = await figmaSync.syncAll();
+    
+    // Notificar via WebSocket
+    io.emit('mep-tokens-updated', {
+      timestamp: new Date(),
+      message: '🔄 Manual sync completed!',
+      data: result
+    });
+    
+    res.json({ 
+      success: true, 
+      message: 'Tokens sincronizados manualmente',
+      result 
+    });
+  } catch (error) {
+    console.error('❌ Error sync manual:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Nueva ruta para obtener el estado actual de los tokens
+app.get('/api/tokens', async (req, res) => {
+  try {
+    const figmaSync = new MEPFigmaSync();
+    const result = await figmaSync.syncAll();
+    res.json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
